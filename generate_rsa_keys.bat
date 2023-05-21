@@ -1,0 +1,2 @@
+ssh-keygen -t rsa -f ./security/internal/jwtrsa.pem -m PKCS8 -C "secret@secret.com"
+ssh-keygen -t rsa -f ./security/internal/jwtrsa.pem -e -m PKCS8 -C "secret@secret.com" > ./security/internal/jwtrsa.pem.pub

@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "pb/user";
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string email = 4;
+  string username = 5;
+  string phone = 6;
+  string tax_number = 7;
+  int32 birthday = 8;
+  string gender = 9;
+  GeneralRegistration general_registration = 10;
+  DriversLicense drivers_license = 11;
+  Address address = 12;
+  google.protobuf.Timestamp created_at = 13;
+  google.protobuf.Timestamp updated_at = 14;
+}
+
+message Address {
+  string street = 1;
+  string number = 2;
+  string neighborhood = 3;
+  string complement = 4;
+  string zip_code = 5;
+  string city = 6;
+  string country = 7;
+}
+
+message DriversLicense {
+  string number = 1;
+  string security_code = 2;
+  string issuer = 3;
+  int32 issued_at = 54;
+}
+
+message GeneralRegistration {
+  string number = 2;
+  string issuer = 3;
+  int32 issued_at = 54;
+}
